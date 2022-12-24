@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Skyline | Admin</title>
+
+    <!-- Favicons -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/favicon.png" rel="apple-touch-icon">
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+
+
+
+    <meta name="author" content="Kunal Pandharkar">
+    <meta name="twitter:title" content="Skyline | Admin">
+    <meta name="twitter:description"
+        content="designed and promoted by maharashtra industries directory, www.maharashtradirectory.com" />
+    <meta property="og:title" content="Skyline | Admin">
+    <meta property="og:url" content="wwww.skyline.com">
+    <meta property="og:image" content="https://samvaidya961.github.io/skylineadmin/assets/images/favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <!-- texteditor js cdn -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div id="sidebar-wrapper" class="bg-dark">
+
+            <div id="adminsidebar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/images/dp.webp" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>Admin</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                        </ul>
+                    </div>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="allusers.html" class="nav-link">
+                            Users
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categories.html" class="nav-link">
+                            Categories & Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="addvariants.html" class="nav-link">
+                            Product Variants
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="brands.html" class="nav-link">
+                            Brands
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="citypincodes.html" class="nav-link">
+                            Cities & Pincodes
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="faq.html" class="nav-link">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html" class="nav-link">
+                            Orders
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quoterequests.html" class="nav-link">
+                            Quote Requests
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg bluebg">
+                <div class="container-fluid d-flex">
+
+                    <button id="sidebarToggle">
+                        <span class="material-icons">
+                            menu
+                        </span>
+                    </button>
+
+                    <div id="companylogo">
+                        <img src="assets/images/logo.png" alt="" onclick="location.href='index.html'">
+                    </div>
+
+                    <button id="navbartogglerbtn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                        <span class="material-icons">
+                            more_vert
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <!-- Page content-->
+            <div class="container-fluid">
+
+                <div class="allcontents bg-white p-2 mt-2">
+
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumblinks">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Order Status</li>
+                        </ol>
+                    </nav>
+
+
+                    <div class="dataaddactions">
+                        <div class="addcategorybtns btn-group">
+                            <button class="btn btn-secondary btn-sm" onclick="location.href=''">Print</button>
+                            <button class="btn btn-secondary btn-sm" onclick="location.href=''">Download PDF</button>
+                        </div>
+                        <!-- searchbar -->
+                        <div id="datasearchbar" class="input-group mt-3 mb-3">
+                            <input type="text" class="form-control" placeholder="Search Orders"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn orangebg" type="button" id="button-addon2">
+                                <span class="material-icons">
+                                    search
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- table -->
+                    <div class="bg-white mt-2">
+
+                        <div id="catvisetabs" class="mt-2">
+                            <ul class="nav nav-tabs" id="tabcategory" role="tablist">
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active categorytabhead" data-bs-toggle="tab"
+                                        data-bs-target="#cat1" type="button" role="tab" aria-controls="cat1"
+                                        aria-selected="true">New Orders</button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link categorytabhead" data-bs-toggle="tab" data-bs-target="#cat2"
+                                        type="button" role="tab" aria-controls="cat1" aria-selected="true">Orders In
+                                        Progress</button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link categorytabhead" data-bs-toggle="tab" data-bs-target="#cat3"
+                                        type="button" role="tab" aria-controls="cat1" aria-selected="true">
+                                        Delivered Orders</button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link categorytabhead" data-bs-toggle="tab" data-bs-target="#cat4"
+                                        type="button" role="tab" aria-controls="cat1" aria-selected="true">Canceled
+                                        Orders</button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link categorytabhead" data-bs-toggle="tab" data-bs-target="#cat5"
+                                        type="button" role="tab" aria-controls="cat1" aria-selected="true">Returned
+                                        Orders</button>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div id="alldatatable" class="tab-content pt-4" id="proTabContent">
+
+                            <div class="tab-pane fade show active" id="cat1" role="tabpanel" aria-labelledby="home-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Payment ID</th>
+                                            <th>Customer Name</th>
+                                           
+                                            <th>Contact No.</th>
+                                            <th>Ship To</th>
+                                            <th>Purchased Products</th>
+                                            <th>Purchased Price</th>
+                                            <th>GST No.</th>
+                                            <th>Trade/Company Name</th>
+                                            <th>Ordered Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+                                            <td>
+                                                <div class="d-flex">
+                                                    <button class="btn bg-success btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#acceptordermodal">
+                                                        <span class="material-icons text-white">
+                                                            done
+                                                        </span>
+                                                    </button>
+
+                                                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#rejectordermodal">
+                                                        <span class="material-icons">
+                                                            close
+                                                        </span>
+                                                    </button>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="tab-pane fade show" id="cat2" role="tabpanel" aria-labelledby="home-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Payment ID</th>
+                                            <th>Customer Name</th>
+                                           
+                                            <th>Contact No.</th>
+                                            <th>Ship To</th>
+                                            <th>Status</th>
+                                            <th>Purchased Products</th>
+
+                                            <th>Purchased Price</th>
+                                            <th>GST No.</th>
+                                            <th>Trade/Company Name</th>
+                                            <th>Ordered Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex editstatusbtn" data-bs-toggle="modal"
+                                                    data-bs-target="#statusupdate">
+                                                    <span class="badge bg-success">Order Accepted</span>
+                                                    <span class="material-icons" style="font-size: 21px;">
+                                                        edit_note
+                                                    </span>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex editstatusbtn" data-bs-toggle="modal"
+                                                    data-bs-target="#statusupdate">
+                                                    <span class="badge bg-secondary">Packed</span>
+                                                    <span class="material-icons" style="font-size: 21px;">
+                                                        edit_note
+                                                    </span>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                            
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex editstatusbtn" data-bs-toggle="modal"
+                                                    data-bs-target="#statusupdate">
+                                                    <span class="badge bg-primary">Shipped</span>
+                                                    <span class="material-icons" style="font-size: 21px;">
+                                                        edit_note
+                                                    </span>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                            
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex editstatusbtn" data-bs-toggle="modal"
+                                                    data-bs-target="#statusupdate">
+                                                    <span class="badge bluebg">Out For Delivery</span>
+                                                    <span class="material-icons" style="font-size: 21px;">
+                                                        edit_note
+                                                    </span>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="tab-pane fade show" id="cat3" role="tabpanel" aria-labelledby="home-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Payment ID</th>
+                                            <th>Customer Name</th>
+                                        
+                                            <th>Contact No.</th>
+                                            <th>Ship To</th>
+                                            <th>Status</th>
+                                            <th>Purchased Products</th>
+                                            <th>Purchased Price</th>
+                                            <th>GST No.</th>
+                                            <th>Trade/Company Name</th>
+                                            <th>Ordered Date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success">Delivered</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-success">Delivered</span>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="tab-pane fade show" id="cat4" role="tabpanel" aria-labelledby="home-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Payment ID</th>
+                                            <th>Customer Name</th>
+                                           
+                                            <th>Contact No.</th>
+                                            <th>Ship To</th>
+                                            <th>Status</th>
+
+                                            <th>Purchased Products</th>
+                                            <th>Purchased Price</th>
+                                            <th>GST No.</th>
+                                            <th>Trade/Company Name</th>
+                                            <th>Ordered Date</th>
+                                            
+                                            <th>Reason</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-primary">Canceled By Admin</span>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+                                            <td>
+                                                <a href="" data-bs-toggle="modal"
+                                                    data-bs-target="#reasonreturnmodal">View</a>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-danger">Canceled By User</span>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+                                            <td>
+                                                <a href="" data-bs-toggle="modal"
+                                                    data-bs-target="#reasoncancelmodalwithreply">View & Reply</a>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="tab-pane fade show" id="cat5" role="tabpanel" aria-labelledby="home-tab">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Payment ID</th>
+                                            <th>Customer Name</th>
+                                       
+                                            <th>Contact No.</th>
+                                            <th>Pickup Address</th>
+
+                                            <th>Purchased Products</th>
+                                            <th>Purchased Price</th>
+                                            <th>GST No.</th>
+                                            <th>Trade/Company Name</th>
+                                            <th>Ordered Date</th>
+                                            <th>Reason</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>#345678902345</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">skyline full user name</p>
+                                                </div>
+                                            </td>
+                                           
+                                            <td>1234567890</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">123 Main Street, New York, NY 10030</p>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#viewproductsmodal">View Products</a>
+                                            </td>
+
+                                            <td>₹5000</td>
+                                            <td>07AABCU9603R1ZP</td>
+                                            <td>
+                                                <div class="tablecellwidth">
+                                                    <p class="mb-0">Any Company Name</p>
+                                                </div>
+                                            </td>
+                                            <td>04-08-2021</td>
+                                            <td>
+                                                <a href="" data-bs-toggle="modal"
+                                                    data-bs-target="#reasonreturnmodalwithreply">View & Reply</a>
+
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-sm justify-content-end">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- Page content ends-->
+
+
+        </div>
+    </div>
+
+
+    <!--modal for order confirm starts -->
+    <div class="modal fade" id="acceptordermodal" tabindex="-1" aria-labelledby="viewusermodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Estimated Delivery
+                            Date :</label>
+                        <input type="date" class="form-control form-control-sm" value="2021-08-04">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bluebg btn-sm">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for order confirm ends-->
+
+    <!--modal for reject confirm starts -->
+    <div class="modal fade" id="rejectordermodal" tabindex="-1" aria-labelledby="viewusermodalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <p>Are you sure that you want to reject this order ?</p>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5"
+                            placeholder="Write reason to reject this order..."></textarea>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm">Confirm Reject Order</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal for reject confirm ends-->
+
+    <!--modal for status update starts  -->
+    <div class="modal fade" id="statusupdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Status :</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Order Accepted
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Order Packed
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Order Shipped
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                Out For Delivery
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                Order Delivered
+                            </label>
+                        </div>
+
+
+
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Estimated Delivery
+                            Date :</label>
+
+                        <input type="date" class="form-control form-control-sm" value="2021-08-04">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bluebg btn-sm">Update Status</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for status update ends  -->
+
+
+    <!--modal for view products ordered starts -->
+    <div class="modal fade" id="viewproductsmodal" tabindex="-1" aria-labelledby="viewproductsmodalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex mb-4 justify-content-between align-content-center">
+                        <h6 class="fw-bold">Purchased Products</h6>
+
+                    </div>
+
+
+                    <div class="orderhistoryitem">
+                        <p class="mb-0">
+                            <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                Cable Red As Per Is 694</a>
+                        </p>
+                        <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                        <p class="mb-0 text-success">₹ 10000</p>
+                        <p class="mb-0 text-secondary">Qty: 200</p>
+                    </div>
+
+
+                    <div class="orderhistoryitem">
+                        <p class="mb-0">
+                            <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                Cable Red As Per Is 694</a>
+                        </p>
+                        <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                        <p class="mb-0 text-success">₹ 10000</p>
+                        <p class="mb-0 text-secondary">Qty: 200</p>
+                    </div>
+
+
+                    <div class="orderhistoryitem">
+                        <p class="mb-0">
+                            <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                Cable Red As Per Is 694</a>
+                        </p>
+                        <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                        <p class="mb-0 text-success">₹ 10000</p>
+                        <p class="mb-0 text-secondary">Qty: 200</p>
+                    </div>
+
+
+                    <div class="orderhistoryitem">
+                        <p class="mb-0">
+                            <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                Cable Red As Per Is 694</a>
+                        </p>
+                        <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                        <p class="mb-0 text-success">₹ 10000</p>
+                        <p class="mb-0 text-secondary">Qty: 200</p>
+                    </div>
+                    <h6 class="fw-bold">Total Amount: ₹10000</h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal for view products ordered  ends-->
+
+
+
+    <!--modal for reply to cancel by user starts -->
+    <div class="modal fade" id="reasoncancelmodalwithreply" tabindex="-1" aria-labelledby="replyreturnmodalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="returnedproduct">
+                        
+                        <div>
+                            <p class="mb-0 fw-bold">Reason to cancel order :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <p class="mb-0 fw-bold">Detailed Reason :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Dolorum odit
+                                quae similique, esse debitis natus exercitationem ut maiores, facere
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <p class="mb-3 fw-bold">Reply to User:</p>
+                    <div class="mb-3">
+                        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5"
+                            placeholder="Write your reply here..."></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bluebg btn-sm">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for reply to cancel by user ends-->
+
+
+
+    <!--modal for reply to return by user starts -->
+    <div class="modal fade" id="reasonreturnmodalwithreply" tabindex="-1" aria-labelledby="replyreturnmodalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-3justify-content-between align-content-center mt-3 mb-2">
+                        <h6 class="fw-bold">Returned Products :</h6>
+                    </div>
+
+                    <div class="returnedproduct">
+                        <div class="orderhistoryitem">
+                            <p class="mb-0">
+                                <strong>Product 1 : </strong>
+                                <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                    Cable Red As Per Is 694</a>
+                            </p>
+                            <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                            <p class="mb-0 text-success">₹ 10000</p>
+                            <p class="mb-0 text-secondary">Qty: 200</p>
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">Reason to return :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <p class="mb-0 fw-bold">Detailed Reason :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Dolorum odit
+                                quae similique, esse debitis natus exercitationem ut maiores, facere
+                            </p>
+                        </div>
+                        <div class="mt-3 mb-3">
+                            <p class="mb-2 fw-bold">Reply to User:</p>
+                            <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5"
+                                placeholder="Write your reply here..."></textarea>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="returnedproduct">
+                        <div class="orderhistoryitem">
+                            <p class="mb-0">
+                                <strong>Product 2 : </strong>
+                                <a href="">Polycab 2.5 Sqmm Single core Fr Pvc Ins. Copper Flexible
+                                    Cable Red As Per Is 694</a>
+                            </p>
+                            <p class="mb-0 text-secondary">Variant: Lorem ipsum dolor sit.</p>
+                            <p class="mb-0 text-success">₹ 10000</p>
+                            <p class="mb-0 text-secondary">Qty: 200</p>
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">Reason to return :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </p>
+                            <p class="mb-0 fw-bold">Detailed Reason :</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Dolorum odit
+                                quae similique, esse debitis natus exercitationem ut maiores, facere
+                            </p>
+                        </div>
+                        <div class="mt-3 mb-3">
+                            <p class="mb-2 fw-bold">Reply to User:</p>
+                            <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5"
+                                placeholder="Write your reply here..."></textarea>
+                        </div>
+                    </div>
+                    <hr>
+                   
+                   
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bluebg btn-sm">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for reply to return by user ends-->
+
+    <!--modal for reason to return by admin starts -->
+    <div class="modal fade" id="reasonreturnmodal" tabindex="-1" aria-labelledby="reasonreturnmodalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">skyline username</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-3justify-content-between align-content-center">
+                        <h6 class="fw-bold">Reason For Returning Product</h6>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Dolorum odit
+                            quae similique, esse debitis natus exercitationem ut maiores, facere
+                            fuga sapiente possimus! Voluptas aliquam facere vero fuga quas
+                            repellendus in!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal for reason to return by admin ends-->
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/image-uploader.min.js"></script>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

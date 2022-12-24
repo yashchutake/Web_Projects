@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Skyline | Admin</title>
+
+    <!-- Favicons -->
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="assets/images/favicon.png" rel="apple-touch-icon">
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+
+    <meta name="author" content="Kunal Pandharkar">
+    <meta name="twitter:title" content="Skyline | Admin">
+    <meta name="twitter:description"
+        content="designed and promoted by maharashtra industries directory, www.maharashtradirectory.com" />
+    <meta property="og:title" content="Skyline | Admin">
+    <meta property="og:url" content="wwww.skyline.com">
+    <meta property="og:image" content="https://samvaidya961.github.io/skylineadmin/assets/images/favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <!-- texteditor js cdn -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+</head>
+
+<body>
+
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div id="sidebar-wrapper" class="bg-dark">
+
+            <div id="adminsidebar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/images/dp.webp" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>Admin</strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+
+                            <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                        </ul>
+                    </div>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <li>
+                        <a href="index.html" class="nav-link">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="allusers.html" class="nav-link">
+                            Users
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categories.html" class="nav-link">
+                            Categories & Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="addvariants.html" class="nav-link">
+                            Product Variants
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="brands.html" class="nav-link">
+                            Brands
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="citypincodes.html" class="nav-link">
+                            Cities & Pincodes
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="faq.html" class="nav-link">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html" class="nav-link">
+                            Orders
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quoterequests.html" class="nav-link">
+                            Quote Requests
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg bluebg">
+                <div class="container-fluid d-flex">
+
+                    <button id="sidebarToggle">
+                        <span class="material-icons">
+                            menu
+                        </span>
+                    </button>
+
+                    <div id="companylogo">
+                        <img src="assets/images/logo.png" alt="" onclick="location.href='index.html'">
+                    </div>
+
+                    <button id="navbartogglerbtn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                        <span class="material-icons">
+                            more_vert
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <!-- Page content-->
+            <div class="container-fluid">
+
+
+
+                <div class="allcontents bg-white p-2 mt-2">
+
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumblinks">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Bulk Quote Requests</li>
+                        </ol>
+                    </nav>
+                    <!-- <div class="panelheading">
+                        <p>Users</p>
+                    </div> -->
+
+
+                    <div class="dataaddactions">
+                        <div class="addcategorybtns btn-group">
+                            <button class="btn btn-secondary btn-sm" onclick="location.href=''">Print</button>
+                            <button class="btn btn-secondary btn-sm" onclick="location.href=''">Download PDF</button>
+                        </div>
+                        <!-- searchbar -->
+                        <div id="datasearchbar" class="input-group mt-3 mb-3">
+                            <input type="text" class="form-control" placeholder="Search Requests"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn orangebg" type="button" id="button-addon2">
+                                <span class="material-icons">
+                                    search
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- table -->
+                    <div id="alldatatable" class="bg-white mt-2">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Username</th>
+                                    <th>Contact No.</th>
+                                    <th>Email</th>
+                                    <th>Pincode</th>
+                                    <th>City</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-2">
+                                        <div class="tablecellwidthbq">
+                                            <p class="mb-0">skyline company name rhtrhtrbth ujfgwhujfgh fjhgf</p>
+                                        </div>
+                                    </td>
+                                    <td class="col-md-2">
+                                        <div class="tablecellwidthbq">
+                                            <p class="mb-0">skyline full user name</p>
+                                        </div>
+                                    </td>
+
+                                    <td>0987654321</td>
+                                    <td class="col-md-2">
+                                        <div class="tablecellwidthbq">
+                                            <p class="mb-0">company12345@gmailwrgrg.com</p>
+                                        </div>
+                                    </td>
+                                    <td>431001</td>
+
+                                    <td class="col-md-2">Aurangabad</td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <button class="btn bluebg btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#viewusermodal">
+                                                View & Reply
+                                            </button>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <!-- pagination -->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-sm justify-content-end">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- Page content ends-->
+
+
+        </div>
+    </div>
+
+
+
+    <!--modal for bulk quote request reply starts -->
+    <div class="modal fade" id="viewusermodal" tabindex="-1" aria-labelledby="viewusermodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bulk Quote Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex mb-4">
+                        <h6 class="fw-bold">User's Request</h6>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            User's Buying Requirement & Qty.
+                        </label>
+                        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="5"
+                            readonly>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam amet praesentium, beatae adipisci autem illo neque accusamus, earum tempore minima ullam commodi debitis dolorem, voluptatem totam nam delectus repudiandae. Beatae.</textarea>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <div class="downloadbulkpdficon">
+                            <span class="material-icons">
+                                file_download
+                            </span>
+                            <a href="">
+                                <span>
+                                    Download User's Quotation
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex mb-4">
+                        <h6 class="fw-bold">Reply To User's Request</h6>
+                    </div>
+                    <form action="">
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Reply:
+                            </label>
+
+                            <div id="editor" class="small">Type here...</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">
+                                Upload Quotation
+                            </label>
+                            <input class="form-control form-control-sm" id="formFileSm" type="file">
+                        </div>
+                        <button class="btn btn-sm orangebg float-end">Send Message</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--modal for bulk quote request reply ends-->
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

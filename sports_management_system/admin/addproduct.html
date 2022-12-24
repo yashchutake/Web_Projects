@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Skyline | Admin</title>
+
+  <!-- Favicons -->
+  <link href="assets/images/favicon.png" rel="icon">
+  <link href="assets/images/favicon.png" rel="apple-touch-icon">
+  <!-- material icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="assets/css/styles.css" rel="stylesheet" />
+
+  <meta name="author" content="Kunal Pandharkar">
+  <meta name="twitter:title" content="Skyline | Admin">
+  <meta name="twitter:description"
+    content="designed and promoted by maharashtra industries directory, www.maharashtradirectory.com" />
+  <meta property="og:title" content="Skyline | Admin">
+  <meta property="og:url" content="wwww.skyline.com">
+  <meta property="og:image" content="https://samvaidya961.github.io/skylineadmin/assets/images/favicon.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <!-- texteditor js cdn -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+  <!-- image uploader css -->
+  <link rel="stylesheet" href="assets/css/image-uploader.min.css">
+  <!-- dynamic inputs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div id="sidebar-wrapper" class="bg-dark">
+
+      <div id="adminsidebar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/dp.webp" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>Admin</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+
+              <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+            </ul>
+          </div>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+
+          <li>
+            <a href="index.html" class="nav-link">
+              Dashboard
+            </a>
+          </li>
+
+          <li>
+            <a href="allusers.html" class="nav-link">
+              Users
+            </a>
+          </li>
+
+          <li>
+            <a href="categories.html" class="nav-link">
+              Categories & Products
+            </a>
+          </li>
+
+          <li>
+            <a href="addvariants.html" class="nav-link">
+              Product Variants
+            </a>
+          </li>
+
+          <li>
+            <a href="brands.html" class="nav-link">
+              Brands
+            </a>
+          </li>
+
+
+          <li>
+            <a href="citypincodes.html" class="nav-link">
+              Cities & Pincodes
+            </a>
+          </li>
+
+
+          <li>
+            <a href="faq.html" class="nav-link">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+            <a href="orders.html" class="nav-link">
+              Orders
+            </a>
+          </li>
+
+          <li>
+            <a href="quoterequests.html" class="nav-link">
+              Quote Requests
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+      <!-- Top navigation-->
+      <nav class="navbar navbar-expand-lg bluebg">
+        <div class="container-fluid d-flex">
+
+          <button id="sidebarToggle">
+            <span class="material-icons">
+              menu
+            </span>
+          </button>
+
+          <div id="companylogo">
+            <img src="assets/images/logo.png" alt="" onclick="location.href='index.html'">
+          </div>
+
+          <button id="navbartogglerbtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="material-icons">
+              more_vert
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- Page content-->
+      <div class="container-fluid">
+
+        <div class="allcontents bg-white p-2 mt-2">
+
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumblinks">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add New Product</li>
+            </ol>
+          </nav>
+
+
+
+          <!--add product form-->
+          <div class="bg-white mt-2 pt-3 p-lg-3">
+            <form method="POST" name="form-example-1" id="form-example-1" enctype="multipart/form-data">
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label class="form-label small">Sub-category :</label>
+                  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <div class="mb-3 col-md-6">
+                  <label class="form-label small">Product Name :</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+
+              <div class="mb-4 mt-2">
+                <label class="form-label small mb-0">Main Product Image :</label>
+                <p class="mb-2 mt-0 small text-secondary"><small>(To be displayed on Product Card)</small></p>
+                <input type="file" class="form-control form-control-sm">
+              </div>
+
+              <div class="mb-3 input-field">
+                <label class="form-label small">Product Images :</label>
+                <div class="input-images-1"></div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="mb-3 col-md-6 col-lg-3">
+                  <label class="form-label small">MRP:</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+                <div class="mb-3 col-md-6 col-lg-3">
+                  <label class="form-label small">Discount :</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+                <div class="mb-3 col-md-6 col-lg-3">
+                  <label class="form-label small">GST :</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+                <div class="mb-3 col-md-6 col-lg-3">
+                  <label class="form-label small">Selling Price :</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+                <div class="mb-3 mt-3 col-sm-2 col-md-6">
+                  <label class="form-label small">Product Availability :</label>
+                  <div class="prodavialverified">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label small" for="inlineRadio1">In Stock</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label small" for="inlineRadio2">Out of Stock</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="mb-3 mt-3 col-md-6">
+                  <label class="form-label small">Skyline Verification :</label>
+                  <div class="prodavialverified">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label small" for="inlineRadio1">Verified</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label small" for="inlineRadio2">Not Verified</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="mt-2 mb-4 form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label small fw-bold" for="flexSwitchCheckDefault">
+                  Add To Top Picks
+                </label>
+              </div>
+
+              <hr>
+              <div class="mb-4 mt-4">
+                <label class="form-label small">Add Properties :</label>
+                <div class="field_wrapperpn">
+                  <div class="mb-3">
+                    <input type="text" class="form-control form-control-sm d-inline m-1" placeholder="Property Name"
+                      name="field_namep1[]">
+
+                    <input type="text" class="form-control form-control-sm d-inline m-1" placeholder="Property Value"
+                      name="field_namep2[]">
+
+                    <a href="javascript:void(0);" class="add_buttonpn" title="Add field">
+                      <span class="material-icons text-success">
+                        add_circle_outline
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="mb-3">
+                <label class="form-label small">Add Product Description :</label>
+                <div id="editor" class="small">Type here...</div>
+              </div>
+
+              <hr>
+
+              <div class="mb-3 col-md-6">
+                <label for="formFileSm" class="form-label small">Upload Product Manual</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file">
+              </div>
+
+              <hr>
+
+              <div class="prodsubmitbtn">
+                <button class="btn btn-sm orangebg" type="submit">Save/Add Product</button>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Page content ends-->
+
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/image-uploader.min.js"></script>
+
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/properties-dynamicfields.js"></script>
+  <script type="text/javascript" src="http://example.com/jquery.min.js"></script>
+  <script type="text/javascript" src="http://example.com/image-uploader.min.js"></script>
+
+
+</body>
+
+</html>
